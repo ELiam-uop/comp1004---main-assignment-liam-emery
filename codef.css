@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+#Shufflebutton {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#Container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.card {
+    height: 125px;
+    width: 100px;
+    cursor: pointer;
+    position:absolute;
+}
+
+.card .layer {
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.card.flipped .layer:not(.base) {
+    display: none;
+}
+
+.card .layer.base {background-image: url("img/cardbase.png"); z-index: 1;}
+.card .layer.rank {background-image: var(--rank-img); z-index: 2;}
+.card .layer.suit {background-image: var(--suit-img); z-index: 3;}
+.card .layer.color {background-image: var(--color-img); z-index: 4;}
